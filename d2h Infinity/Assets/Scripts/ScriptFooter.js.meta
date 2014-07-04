@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 45927c1d56fb7fd4daafd12101e3f695
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - g_texBack: {fileID: 2800000, guid: b05e06554c9f04e4981a8026c24e0f31, type: 3}
+  - g_texHome: {fileID: 2800000, guid: a5f425de59aab2d40b819305ca5b3f3b, type: 3}
+  - g_texLogout: {fileID: 2800000, guid: 9f39225f75d8ecf4184699bb8e196eed, type: 3}
+  - g_texRecharge: {fileID: 2800000, guid: 08605f94ae37d114c87649355e929d8d, type: 3}
+  - g_texPackage: {fileID: 2800000, guid: d808950ec5b4d0d458460996f1cf3a25, type: 3}
+  - g_texHelp: {fileID: 2800000, guid: 200f61a52ae00e743ba65ec57423763e, type: 3}
+  - g_texd2hCinema: {fileID: 2800000, guid: 73c8cec131a1a03499bddd17e2cf9a38, type: 3}
+  - g_texTVGuide: {fileID: 2800000, guid: af69d103525875044b985fa2b19ad44a, type: 3}
+  - g_texFooterStrip: {fileID: 2800000, guid: e55bea860c1a3fb47904499d27049a12, type: 3}
+  - g_texActiveButton: {fileID: 2800000, guid: f712448e8d1dcbd45b63bf1c4d27b30a, type: 3}
+  - g_skinFooter: {fileID: 11400000, guid: 7686ef617b0b5f648a4dcf929f906ce1, type: 2}
+  - g_objScriptAPIHandler: {instanceID: 0}
+  - m_objScriptProgramGuide: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

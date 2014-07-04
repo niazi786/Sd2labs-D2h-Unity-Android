@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:theme="@android:style/Theme.NoTitleBar" package="com.sd2labs.infinity" android:versionName="1.4" android:versionCode="4">
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  
+  <!-- For customize with your app change below lines 11 and 13 "com.shephertz.app42.unity.android.test".with your app package name-->
+    <permission
+        android:name="com.sd2labs.infinity.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+	
+	<uses-permission android:name="com.sd2labs.infinity.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+	
+  <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="false">
+    <activity android:name="com.unity3d.player.UnityPlayerProxyActivity" android:launchMode="singleTask" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="sensorLandscape">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:launchMode="singleTask" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="sensorLandscape">
+    </activity>
+    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:launchMode="singleTask" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="sensorLandscape">
+      <meta-data android:name="android.app.lib_name" android:value="unity" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+    </activity>
+	
+	<receiver
+			android:name="com.shephertz.app42.android.pushservice.App42GCMReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND" >
+		<intent-filter>
+			<!-- Receives the actual messages. -->
+			<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			<!-- Receives the registration id. -->
+			<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+			 <!-- For customize with your app change below line 51 "com.shephertz.app42.unity.android.test".with your app package name-->
+			<category android:name="com.sd2labs.infinity" />
+		</intent-filter>
+	</receiver>
+	
+	<!--
+	  Application-specific subclass of GCMBaseIntentService that will
+	  handle received messages.
+	  By default, it must be named .GCMIntentService, unless the
+	  application uses a custom BroadcastReceiver that redefines its name.
+	-->
+	<service android:name="com.shephertz.app42.android.pushservice.App42GCMService" >
+		<!-- Defined Activity when Meesage is opened-->
+		<meta-data android:name="onMessageOpen" android:value="com.unity3d.player.UnityPlayerProxyActivity" />
+	</service>
+  </application>
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-feature android:name="android.hardware.touchscreen" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17" />
+</manifest>

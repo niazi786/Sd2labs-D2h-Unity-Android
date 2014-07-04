@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0419b150ecb95b24a8f376898159e753
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_skinAnimation: {fileID: 11400000, guid: 67aa04aa6dceba545869c378f60af4fb, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

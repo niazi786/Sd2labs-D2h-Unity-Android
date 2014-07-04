@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 953ae5d27f78aa2438a00430c13efe64
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_skinHeader: {fileID: 11400000, guid: 8ef9eeede3453fb40af895c3319b171a, type: 2}
+  - m_tex2DPurple: {fileID: 2800000, guid: 22cc30322c0f25246b995b9c283be322, type: 3}
+  - m_fontRegular: {fileID: 12800000, guid: 10d747ed16ecea245ae1d2ac4680593a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
